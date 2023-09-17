@@ -7,23 +7,52 @@
 	<title>My kitchen</title>
 </head>
 <body>
-	<div>
-		<header>
-			<h1>MyKichen</h1>
-		</header>
-		<nav>
-			<a href="page1.html">page1</a>
-			<a href="page2.html">page2</a>
-			<a href="page3.html">page3</a>
-			<a href="page4.html">page4</a>
-			<a href="page5.html">page5</a>
-		</nav>
+	<header>
 		<div>
-			<img src="img/tg.png" alt="Telegram">
-			<img src="img/t.png" alt="Twitter">
-			<img src="img/inst.png" alt="Instagram">
-			<img src="img/f.png" alt="Facebook">
+			<a href="page1.html"><h1>MyKichen</h1></a>
 		</div>
+		<nav>
+			<a href="page1.html">Home</a>
+			<a href="page2.html">Recipes</a>
+			<a href="page3.html">Offer</a>
+			<a href="page4.html">page4</a>
+			<a href="page5.html">About Us</a>
+		</nav>
+		<div class="contact">
+			<a href="https://web.telegram.org/"><img src="img/tg.png" alt="Telegram" class="headimg"></a>
+			<a href="https://twitter.com/"><img src="img/t.png" alt="Twitter" class="headimg"></a>
+			<a href="https://www.instagram.com/"><img src="img/inst.png" alt="Instagram" class="headimg"></a>
+			<a href="https://www.facebook.com/"><img src="img/f.png" alt="Facebook" class="headimg"></a>
+		</div>
+	</header>
+	<main>
+		<p><b><i>Cook</i> with us</b></p>
+		<div class="slider">
+			<div class="slides">
+				<input type="radio" name="rb" id="rb1" checked>
+				<input type="radio" name="rb" id="rb2">
+				<input type="radio" name="rb" id="rb3">
+				<input type="radio" name="rb" id="rb4">
+				<input type="radio" name="rb" id="rb5">
+				
+				<div class="slide move"><img src="img/1.png"></div>
+				<div class="slide"><img src="img/2.png"></div>
+				<div class="slide"><img src="img/3.png"></div>
+				<div class="slide"><img src="img/4.png"></div>
+				<div class="slide"><img src="img/5.png"></div>
+			</div>
+			<div class="navigaiton">
+				<label for="rb1" class="bar"></label>
+				<label for="rb2" class="bar"></label>
+				<label for="rb3" class="bar"></label>
+				<label for="rb4" class="bar"></label>
+				<label for="rb5" class="bar"></label>
+			</div>
+
+		</div>
+	</main>
+	<div class="footer">
+		<p> &copy; Zhangeldy </p>
 	</div>
 </body>
 </html>
