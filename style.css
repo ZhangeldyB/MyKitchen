@@ -13,13 +13,22 @@ body{
 	margin: 0px;
 	padding: 0px;
 }
-a, p, label{
+a, p, label, select, button{
 	font-family: "arial";
 	color: black;
 	text-decoration: none;
 	font-size: 30px;
 }
 
+::selection{
+	color: white;
+	background-color: black;
+}
+
+h1::first-letter{
+	color: white;
+	text-shadow: black 1px 1px 1px, black -1px -1px 1px, black 1px -1px 1px, black -1px 1px 1px;
+}
 
 /*header*/
 
@@ -154,7 +163,7 @@ form{
 }
 
 .formgap{
-	margin: 20px  20px;
+	margin: 10px  20px;
 }
 .form{
 	display: flex;
@@ -186,4 +195,38 @@ form{
 
 .about-us ul, .about-us ol{
 	row-gap: 20px;
+}
+
+.button{
+	color: black;
+	background-color: white;
+	border: 2px solid black;
+	transition-duration: 0.3s;
+	font-size: 20px;
+	padding: 5px;
+}
+
+.button:hover{
+	color: white;
+	background-color: black;
+	border: 2px solid white;
+}
+
+.sel{
+	color: black;
+	padding: 5px;
+	font-size: 20px;
+	border: 2px solid black;
+}
+
+textarea{
+	padding: 5px;
+	font-size: 15px;
+	font-family: "arial";
+	border: 2px solid black;
+}
+
+option:checked{
+	background-color: black;
+	color: white;
 }
