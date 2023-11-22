@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyKitchen</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+		.card-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+			margin: 16px;
+        }
+
+		.like-dislike {
+            display: flex;
+            align-items: center;
+			justify-content: center;
+			
+        }
+
+		.like-count, .dislike-count {
+            margin-right: 10px; /* Add margin between "Likes" and "Dislikes" */
+        }
+    </style>
+</head>
+<body>
+<section class="center">
+    <nav class="navbar navbar-expand-md bg-white border-bottom border-black">
+        <div class="container-fluid mx-4">
+            <a class="navbar-brand" href="Home.html">MyKitchen</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Recipes.html">Recipes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Order.html">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact_us.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</section>
+<section>
+    <div class="container">
+        <div class="row mb-5 mx-auto">
+            <div class="col-xl-4 col-lg-4 col-md-6 my-4 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/card1.png" class="card-img-top" alt="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Recipe French</h5>
+                        <p class="card-text">Collection of more than 125 recipes from French cuisine form top chefs all over the world.</p>
+						<div class="card-buttons">
+						<button class="btn btn-primary buy-button" data-price="149">149$</button>
+                        <button class="btn btn-success like-button">Like</button>
+                        <button class="btn btn-danger dislike-button">Dislike</button>
+						</div>
+						<div class="like-dislike">
+                        <p class="like-count">0 Likes</p>
+                        <p class="dislike-count">0 Dislikes</p>
+					</div>
+                    </div>
+                </div>
+            </div>
+
+			<div class="col-xl-4 col-lg-4 col-md-6 my-4 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/card2.png" class=" card-img-top" alt="card">
+                    <div class ="card-body">
+                        <h5 class="card-title">Subscription</h5>
+                        <p class="card-text">Become our member and get -50% discount for all event tickets for 6 months.</p>
+						<div class="card-buttons">
+                        <button class="btn btn-primary buy-button" data-price="159">159$</button>
+
+						<button class="btn btn-success like-button">Like</button>
+                        <button class="btn btn-danger dislike-button">Dislike</button>
+						</div>
+						<div class="like-dislike">
+                        <p class="like-count">0 Likes</p>
+                        <p class="dislike-count">0 Dislikes</p>
+						</div>
+					</div>
+                </div>
+            </div>
+
+			<div class="col-xl-4 col-lg-4 col-md-6 my-4 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/card3.png" class=" card-img-top" alt="card">
+                    <div class= "card-body">
+                        <h5 class="card-title">Recipe Italy</h5>
+                        <p class="card-text">Collection of more than 142 recipes from italian cuisine form pasta to gazpacho.</p>
+						<div class="card-buttons">
+                        <button class="btn btn-primary buy-button" data-price="119">119$</button>
+
+						<button class="btn btn-success like-button">Like</button>
+                        <button class="btn btn-danger dislike-button">Dislike</button>
+						</div>
+						<div class="like-dislike">
+                        <p class="like-count">0 Likes</p>
+                        <p class="dislike-count">0 Dislikes</p>
+					</div>
+					</div>
+                </div>
+            </div>
+
+			<div class="col-xl-4 col-lg-4 col-md-6 my-4 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/card4.png" class=" card-img-top" alt="card">
+                    <div class ="card-body">
+                        <h5 class="card-title">Helthy food</h5>
+                        <p class="card-text">Cookbook with 96 recipes for those who wants to eat tasty and be healthy.</p>
+						<div class="card-buttons">
+                        <button class="btn btn-primary buy-button" data-price="199">199$</button>
+
+						<button class="btn btn-success like-button">Like</button>
+                        <button class="btn btn-danger dislike-button">Dislike</button>
+						</div>
+						<div class="like-dislike">
+                        <p class="like-count">0 Likes</p>
+                        <p class="dislike-count">0 Dislikes</p>
+				</div>
+			</div>
+                </div>
+            </div>
+			<div class="col-xl-4 col-lg-4 col-md-6 my-4 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/card5.png" class=" card-img-top" alt="card">
+                    <div class ="card-body">
+                        <h5 class="card-title">Recipe Global</h5>
+                        <p class="card-text">Recipe book with plenty recipes from cuisines of 88 countries all over the world.</p>
+						<div class="card-buttons">
+                        <button class="btn btn-primary buy-button" data-price="199">199$</button>
+
+						<button class="btn btn-success like-button">Like</button>
+                        <button class="btn btn-danger dislike-button">Dislike</button>
+						</div>
+						<div class="like-dislike">
+                        <p class="like-count">0 Likes</p>
+                        <p class="dislike-count">0 Dislikes</p>
+			</div>		
+		</div>
+                </div>
+            </div>
+			<div class="col-xl-4 col-lg-4 col-md-6 my-4 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/card6.png" class=" card-img-top" alt="card">
+                    <div class= "card-body">
+                        <h5 class="card-title">Recipe Kazakh</h5>
+                        <p class="card-text">We have collected recipes of about 60 unique and authentic kazakh dishes for You.</p>
+						<div class="card-buttons">
+                        <button class="btn btn-primary buy-button" data-price="119">119$</button>
+
+						<button class="btn btn-success like-button">Like</button>
+                        <button class="btn btn-danger dislike-button">Dislike</button>
+						</div>
+						<div class="like-dislike">
+                        <p class="like-count">0 Likes</p>
+                        <p class="dislike-count">0 Dislikes</p>
+				</div>
+				</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<button type="button" class="btn btn-dark rounded-circle position-fixed bottom-0 end-0 m-5" data-bs-toggle="modal" data-bs-target="#cartModal">
+  <i class="bi bi-cart"></i>
+</button>
+<section>
+    <div class="container-fluid bg-dark text-white text-center fixed-bottom">
+        <h4>Copyright &copy;Zhangeldy</h4>
+    </div>
+</section>
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cartModalLabel">Shopping Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group" id="cartItemsList"></ul>
+      </div>
+      <div class="modal-footer">
+        <div class="total-price">Total: $<span id="totalPrice">0</span></div>
+        <button type="button" class="btn btn-primary" onclick="pay()">Pay</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script>
+    const buyButtons = document.querySelectorAll(".buy-button");
+    const likeButtons = document.querySelectorAll(".like-button");
+    const dislikeButtons = document.querySelectorAll(".dislike-button");
+    const likeCounters = document.querySelectorAll(".like-count");
+    const dislikeCounters = document.querySelectorAll(".dislike-count");
+
+    let likeCounts = Array.from({ length: likeButtons.length }, () => 0);
+    let dislikeCounts = Array.from({ length: dislikeButtons.length }, () => 0);
+
+    function updateLikeCounter(index) {
+        likeCounters[index].textContent = `${likeCounts[index]} Likes`;
+    }
+
+    function updateDislikeCounter(index) {
+        dislikeCounters[index].textContent = `${dislikeCounts[index]} Dislikes`;
+    }
+
+    function pay(){
+        const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser')) || [];
+        const currentUserEmail = loggedInUser.email;
+
+        const basket = JSON.parse(localStorage.getItem('basket')) || [];
+        const filteredBasket = basket.filter(item => item.email !== currentUserEmail);
+
+        localStorage.setItem('basket', JSON.stringify(filteredBasket));
+        alert("Purchase is done! Your cart is now empty.");
+        window.location.reload();
+    }
+    buyButtons.forEach((button, index) => {
+        button.addEventListener("click", function() {
+            const price = button.getAttribute("data-price");
+            const productName = button.parentElement.parentElement.querySelector(".card-title").textContent;
+            const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser')) || [];
+            const email = loggedInUser.email;
+            const confirmation = confirm(`Thank you for purchasing ${productName}! You will be charged $${price}. Your email is: ${email}. Confirm purchase?`);
+            const userName = loggedInUser.name;
+            if (confirmation) {
+                const basketItem = {
+                    owner: userName,
+                    email: email,
+                    price: price,
+                    productName: productName
+                };
+                const basket = JSON.parse(localStorage.getItem('basket')) || [];
+                basket.push(basketItem);
+                localStorage.setItem('basket', JSON.stringify(basket));
+                updateCartModal();
+            } else {
+                alert("Purchase canceled.");
+            }
+        });
+    });
+
+    likeButtons.forEach((likeButton, index) => {
+        likeButton.addEventListener("click", () => {
+            likeCounts[index]++;
+            updateLikeCounter(index);
+        });
+    });
+
+    dislikeButtons.forEach((dislikeButton, index) => {
+        dislikeButton.addEventListener("click", () => {
+            dislikeCounts[index]++;
+            updateDislikeCounter(index);
+        });
+    });
+
+    function updateCartModal() {
+        const cartItemsList = document.getElementById('cartItemsList');
+        const totalPriceSpan = document.getElementById('totalPrice');
+
+        cartItemsList.innerHTML = '';
+
+        const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser')) || [];
+        const currentUserEmail = loggedInUser.email;
+
+        const basket = JSON.parse(localStorage.getItem('basket')) || [];
+        let filteredBasket = [];
+
+        for (const item of basket) {
+            if (item.email === currentUserEmail) {
+                filteredBasket.push(item);
+            }
+        }
+
+        let totalPrice = 0;
+
+        filteredBasket.forEach((item, index) => {
+            const listItem = document.createElement('li');
+            listItem.classList.add('list-group-item');
+            listItem.innerHTML = `
+                <span>${item.productName}</span>
+                <span class="float-end">$${item.price}</span>
+            `;
+            cartItemsList.appendChild(listItem);
+
+            totalPrice += parseFloat(item.price);
+        });
+        totalPriceSpan.textContent = totalPrice.toFixed(2);
+    }
+
+    // Add event listener to update the cart modal when it is shown
+    // const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
+    // cartModal.addEventListener('show.bs.modal', updateCartModal);
+    const cartModal = document.getElementById('cartModal');
+    cartModal.addEventListener('show.bs.modal', updateCartModal);
+</script>
+</body>
+</html>

@@ -1,232 +1,65 @@
-html, body {
-	margin: 0px;
-	width: 100%;
-	height: 100%;
-}
-	
-body{
-	display: flex;
-	flex-direction: column;
-}
-
-* {
-	margin: 0px;
-	padding: 0px;
-}
-a, p, label, select, button{
-	font-family: "arial";
-	color: black;
-	text-decoration: none;
-	font-size: 30px;
-}
-
-::selection{
-	color: white;
-	background-color: black;
-}
-
-h1::first-letter{
-	color: white;
-	text-shadow: black 1px 1px 1px, black -1px -1px 1px, black 1px -1px 1px, black -1px 1px 1px;
-}
-
-/*header*/
-
-header{
-	padding: 10px 0px 5px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 50px;
-	border-bottom: 5px solid black;
-}
-nav a{
-	margin: 0px 5px;
-}
-.headimg{
-	width: 30px;
-	height: auto;
-	margin-right: 15px;
-}
-/*footer*/
-
-.footer{
-	display: flex;
-	margin-top: auto;
-	width: 100%;
-	justify-content: center;
-	padding: 5px 0px 10px;
-	border-top: 5px solid black;
-	position: fixed;
-	bottom: 0px;
-	background-color: white;
-}
-
-/*main*/
-main{
-	width: 100%;
-	height: 100%;
-}
-main p{
-	top: 18%;
-	left: 50%;
-	position: absolute;
-	transform: translateX(-50%);
-}
-/*slider*/
 .slider{
-	position: absolute;
-	width: 780px;
-	height: 438px;
-	left: 50%;
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	margin-top: 1%;
+}
+
+.wrapper, .slide{
+	white-space: nowrap;
+	cursor: pointer;
+	font-size: 0px;
+	overflow:hidden;
+	scroll-behavior: smooth;
+}
+
+.wrapper{
+	position: relative;
+	padding: 0px 40px;
+}
+
+.wrapper i{
+	background: #ffffff;
+	border:solid 1px black;
+	cursor: pointer;	
+	height: 45px;
+	width: 45px;
 	top: 50%;
-	transform: translate(-50%, -35%);
-	border: 2px solid black;
-	overflow: hidden;
-	background-color: darkgray;
-}
-
-.navigaiton{
-	position: absolute;
-	bottom: 10px;
-	left: 50%;
-	transform: translate(-50%);
-	display: flex;
-}
-
-.bar{
-	width: 30px;
-	height: 10px;
-	background-color: lightgray;
-	margin: 0px 10px;
-	opacity: 0.5;
-	border-radius: 5px;	
-	transition: all 0.5s ease;
-	border: 1px solid black;
-}
-
-.bar:hover{
-	opacity: 1;
-	transform: scale(1.8);
-}
-.slides{
-	width: 500%;
-	height: 100%;
-	display: flex;
-}
-input[name=rb]{
-	visibility: hidden;
+	transform: translateY(-50%);
+	text-align: center;
+	line-height: 45px;
+	border-radius: 50%;
+	font-size: 1.2rem;
 	position: absolute;
 }
 
-.slide{
-	width: 20%;
-	transition: all 0.5s ease;
+.wrapper i:first-child{
+	left: 20px;
+}
+.wrapper i:last-child{
+	right: 20px;
 }
 
 .slide img{
-	width: 100%;
-	height: 100%;
+	height: 240px;
+	margin-left: 20px;
+	object-fit: cover;
+	width:  calc(100%/3);
 }
 
-#rb1:checked ~ .move{
-	margin-left:-0%;
-}
-#rb2:checked ~ .move{
-	margin-left:-20%;
-}
-#rb3:checked ~ .move{
-	margin-left:-40%;
-}
-#rb4:checked ~ .move{
-	margin-left:-60%;
-}
-#rb5:checked ~ .move{
-	margin-left:-80%;
+.slide img:first-child{
+	margin-left: 0px;
 }
 
-/*form*/
-form{
-	position: absolute;
-	width: 40%;
-	height: 100%;
-	display: flex;
-	padding: 20px 0px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	row-gap: 15px;
-}
-.big{
-	height: 40%;
-	width: 60%;
+@media screen and (max-width: 900px){
+	.slide img{
+		height: 200px;
+		width:  calc(100%/2);
+	}
 }
 
-.formgap{
-	margin: 10px  20px;
-}
-.form{
-	display: flex;
-	justify-content: center;
-}
-
-.about-us{
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
-}
-
-.p3x4{
-	height: 120px;
-	width: 150px;
-
-}
-
-.about-us{
-	padding: 50px;
-	marign: 0px auto;
-}
-.about-us div{
-	width: 100%;
-}
-
-.about-us h2{
-	margin: 20px;
-}
-
-.about-us ul, .about-us ol{
-	row-gap: 20px;
-}
-
-.button{
-	color: black;
-	background-color: white;
-	border: 2px solid black;
-	transition-duration: 0.3s;
-	font-size: 20px;
-	padding: 5px;
-}
-
-.button:hover{
-	color: white;
-	background-color: black;
-	border: 2px solid white;
-}
-
-.sel{
-	color: black;
-	padding: 5px;
-	font-size: 20px;
-	border: 2px solid black;
-}
-
-textarea{
-	padding: 5px;
-	font-size: 15px;
-	font-family: "arial";
-	border: 2px solid black;
-}
-
-option:checked{
-	background-color: black;
-	color: white;
+@media screen and (max-width: 550px){
+	.slide img{
+		width:  100%;
+	}
 }

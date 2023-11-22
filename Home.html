@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MyKitchen</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<style>
+		.center{
+			display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+	</style>
+</head>
+<body>
+	<section class="forms-section">
+	    <div class="modal fade show" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form id="signIn" action="#" method="post">
+                            <input type="text" id="signInUsername" placeholder="Username" required>
+                            <input type="password" id="signInPassword" placeholder="Password" required>
+                            <button type="submit">Sign In</button>
+                        </form>
+                        <p>Not a member? <a href="#" data-bs-toggle="modal" data-bs-target="#signUpModal" data-bs-dismiss="modal">Register</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+	    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+	        <div class="modal-dialog">
+	            <div class="modal-content">
+	                <div class="modal-header">
+	                    <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
+	                </div>
+	                <div class="modal-body">
+	                    <form id="signUp" action="#" method="post">
+	                        <input type="text" id="signUpName" name="uname" placeholder="Name" required>
+					        <div id="nameError" class="error-message"></div>
+
+					        <input type="email" id="signUpEmail" name="uemail" placeholder="Email" required>
+					        <div id="emailError" class="error-message"></div>
+
+					        <input type="password" id="signUpPassword" name="password" placeholder="Password" required>
+					        <div id="passwordError" class="error-message"></div>
+
+					        <input type="password" id="signUpConfirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+					        <div id="confirmPasswordError" class="error-message"></div>
+
+					        <input type="text" id="signUpBankCard" name="bankCard" placeholder="Bank Card Number" required>
+					        <div id="bankCardError" class="error-message"></div>
+	                        <button type="submit">Sign Up</button>
+	                    </form>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	<section class="center">
+		<nav class="navbar navbar-expand-md border-bottom border-black">
+			<div class="container-fluid mx-4">
+				<a class="navbar-brand" href="Home.html">MyKitchen</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="Home.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="Recipes.html">Recipes</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="Order.html">Order</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="Contact_us.html">Contact Us</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</section>
+	<section>
+		<div class="container-fluid">
+			<div class="row justify-content-center m-0 mt-4">
+				<div class="col-sm-10 col-md-10 col-lg-8 col-xl-12 text-center">
+					<h2><strong>MyKitchen</strong> - is a place where you can learn how to make <em>miracle</em></h2>
+				</div>
+			</div>
+			<div class="row m-0 justify-content-center mt-3">
+				<div class="col-xl-2 col-lg-3 justify-content-center d-flex">
+					<button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Sign up for our events</button>
+					<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+					    <div class="offcanvas-header">
+					        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Sign up for our events☺</h5>
+					        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					    </div>
+					    <div class="offcanvas-body ">
+					        <ul class="list-group list-group-flush">
+							    <li class="list-group-item"><a href="#" class="text-dark text-decoration-none">Italian Cuisine Marathon | November 14, 2023</a></li>
+							    <li class="list-group-item"><a href="#" class="text-dark text-decoration-none">Pumpkin and Squash Festival | November 27, 2023</a></li>
+							    <li class="list-group-item"><a href="#" class="text-dark text-decoration-none">Cooking class with Gordon Ramsay | December 12, 2023</a></li>
+							    <li class="list-group-item"><a href="#" class="text-dark text-decoration-none">Garlic Festival | March 24, 2024</a></li>
+							    <li class="list-group-item"><a href="#" class="text-dark text-decoration-none">Young Chef's Spring Camp | April 14, 2024</a></li>
+							</ul>
+							<div class="container bg-body-secondary rounded-5 mt-5 py-3">
+								<div class="container bg-light rounded-5 my-2 py-4">
+									<p class="text-secondary px-5">Click to the event to opent a form of registration. Place, price and all ditaled information will be sent on your email. Hope you will have fun! Yum~☺</p>
+								</div>
+							</div>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center m-0 mt-5">
+				<div class="col-xl-5 col-lg-10 text-center">
+					<h3>Your works are here ↓</h3>
+				</div>
+			</div>
+			<div class="row justify-content-center mx-auto mt-2">
+				<div id="carouselExampleIndicators" class="carousel slide text-center col-xl-5 col-lg-10 col-sm-10">
+				    <div class="carousel-indicators mx-auto">
+				        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				    </div>
+				    <div class="carousel-inner">
+				        <div class="carousel-item active d-block ">
+				            <img src="img/1.png" class="img-fluid d-block mx-auto" alt="...">
+				        </div>
+				        <div class="carousel-item">
+				            <img src="img/2.png" class="img-fluid d-block mx-auto" alt="...">
+				        </div>
+				        <div class="carousel-item">
+				            <img src="img/3.png" class="img-fluid d-block mx-auto" alt="...">
+				        </div>
+				    </div>
+				    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" style="filter: invert(100%);">
+				        <span class="carousel-control-prev-icon ms-4" aria-hidden="true"></span>
+				        <span class="visually-hidden">Previous</span>
+				    </button>
+				    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" style="filter: invert(100%);">
+				        <span class="carousel-control-next-icon me-4" aria-hidden="true"></span>
+				        <span class="visually-hidden">Next</span>
+				    </button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container-fluid bg-dark text-white text-center fixed-bottom">
+			<h4>Copyright &copy;Zhangeldy</h4>
+		</div>
+	</section>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+	        const button = document.querySelector('.btn-dark');
+
+	        button.addEventListener('mouseover', function () {
+	            button.style.backgroundColor = 'light-gray';
+	        });
+
+	        button.addEventListener('mouseout', function () {
+	            button.style.backgroundColor = '';
+	        });
+	    });
+
+        var loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+
+	    if (!loggedInUser) {
+	        var myModal = new bootstrap.Modal(document.getElementById('signInModal'), {
+	            backdrop: 'static',
+	            keyboard: false
+	        });
+
+	        myModal.show();
+	    } else {
+	    }
+
+		function showSignUpForm() {
+		    document.getElementById("signInModal").style.display = "none";
+		    document.getElementById("signUpModal").style.display = "block";
+		}
+
+		document.getElementById("signUpName").addEventListener("input", function () {
+            validateName();
+        });
+
+        document.getElementById("signUpEmail").addEventListener("input", function () {
+            validateEmail();
+        });
+
+        document.getElementById("signUpPassword").addEventListener("input", function () {
+            validatePassword();
+        });
+
+        document.getElementById("signUpConfirmPassword").addEventListener("input", function () {
+            validateConfirmPassword();
+        });
+
+        document.getElementById("signUpBankCard").addEventListener("input", function () {
+            validateBankCard();
+        });
+
+        function validateName() {
+            const name = document.getElementById("signUpName").value;
+            const nameRegex = /^[a-zA-Z]{2,}$/;
+            if (!name.match(nameRegex)) {
+                document.getElementById("nameError").innerText = "Name should be at least 2 characters long and must not contain numbers.";
+            } else {
+                document.getElementById("nameError").innerText = "";
+            }
+        }
+
+        function validateEmail() {
+            const email = document.getElementById("signUpEmail").value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email.match(emailRegex)) {
+                document.getElementById("emailError").innerText = "Please enter a valid email address.";
+            } else {
+                document.getElementById("emailError").innerText = "";
+            }
+        }
+
+        function validatePassword() {
+            const password = document.getElementById("signUpPassword").value;
+            const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+            if (!password.match(passwordRegex)) {
+                document.getElementById("passwordError").innerText = "Password should be at least 6 characters long and contain at least one number, one uppercase letter, and one lowercase letter.";
+            } else {
+                document.getElementById("passwordError").innerText = "";
+            }
+        }
+
+        function validateConfirmPassword() {
+            const confirmPassword = document.getElementById("signUpConfirmPassword").value;
+            const password = document.getElementById("signUpPassword").value;
+            if (password !== confirmPassword) {
+                document.getElementById("confirmPasswordError").innerText = "Passwords do not match.";
+            } else {
+                document.getElementById("confirmPasswordError").innerText = "";
+            }
+        }
+
+        function validateBankCard() {
+            const bankCard = document.getElementById("signUpBankCard").value;
+            const bankCardRegex = /^\d{16}$/;
+            if (!bankCard.match(bankCardRegex)) {
+                document.getElementById("bankCardError").innerText = "Bank card number should be 16 digits long.";
+            } else {
+                document.getElementById("bankCardError").innerText = "";
+            }
+        }
+
+		document.getElementById("signUp").addEventListener("submit", function (event) {
+		    const name = document.getElementById("signUpName").value;
+		    const email = document.getElementById("signUpEmail").value;
+		    const password = document.getElementById("signUpPassword").value;
+		    const confirmPassword = document.getElementById("signUpConfirmPassword").value;
+		    const bankCard = document.getElementById("signUpBankCard").value;
+
+		    const user = {
+	            name: name,
+	            email: email,
+	            password: password,
+	            bankCard: bankCard
+	        };
+
+	        let users = JSON.parse(localStorage.getItem('users')) || [];
+	        const existingUser = users.find((user) => user.email === email);
+	        if (existingUser) {
+	            alert('User already exists with this email.');
+	            event.preventDefault();
+	        } else {
+	            users.push(user);
+	            localStorage.setItem('users', JSON.stringify(users));
+	        }
+
+   		});
+
+   		document.getElementById("signIn").addEventListener("submit", function (event) {
+   			event.preventDefault();
+		    const email = document.getElementById("signInUsername").value;
+		    const password = document.getElementById("signInPassword").value;
+
+		    const users = JSON.parse(localStorage.getItem("users")) || [];
+		    const adminEmail = "Admin@Admin.Admin";
+		    const adminPassword = "Admin1";
+
+		    if (email === adminEmail && password === adminPassword) {
+		      const existingUser = users.find(
+		        (user) => user.email === email && user.password === password
+		      );
+		      localStorage.setItem("loggedInUser", JSON.stringify(existingUser));
+
+		      window.location.href = "adminPage.html";
+		    } else {
+				const existingUser = users.find((user) => user.email === email && user.password === password);
+
+				if (existingUser) {
+					localStorage.setItem("loggedInUser", JSON.stringify(existingUser));
+					window.location.reload();
+				} else {
+					alert("Invalid email or password. Please try again.");
+				}
+		    }
+		  });
+	</script>
+</body>
+</html>

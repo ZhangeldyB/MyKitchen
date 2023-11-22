@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyKitchen</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<section class="center">
+    <nav class="navbar navbar-expand-md bg-white border-bottom border-black">
+        <div class="container-fluid mx-4">
+            <a class="navbar-brand" href="Home.html">MyKitchen</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Recipes.html">Recipes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Order.html">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact_us.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</section>
+<section>
+    <div class="container" id="contact">
+        <h1 class="text-center mt-5">Contact Us</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="m-auto rounded-4 p-5 mt-4 bg-body-secondary">
+                    <form id="contactForm" novalidate>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="name">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="email" placeholder="name@example.com">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="phone" placeholder="87777777777">
+                            <label for="phone">Phone number</label>
+                        </div>
+                        <div class="mb-4">
+                            <textarea class="form-control" rows="5" placeholder="Message" id="message"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="button" class="btn btn-dark" onclick="validateForm()">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container-fluid bg-dark text-white text-center fixed-bottom">
+        <h4>Copyright &copy;Zhangeldy</h4>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script>
+    function validateForm() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var message = document.getElementById("message").value;
+
+        if (name.length < 2) {
+            alert("Name must be at least 2 characters long");
+            return false;
+        }
+
+        if (!isValidEmail(email)) {
+            alert("Please enter a valid email address");
+            return false;
+        }
+
+        if (!isValidPhone(phone)) {
+            alert("Please enter a valid 11-digit phone number");
+            return false;
+        }
+
+        if (message.length < 10) {
+            alert("Message must be at least 10 characters long");
+            return false;
+        }
+        alert("Success! Your form has been submitted.");
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("message").value = "";
+
+    function isValidEmail(email) {
+        var emailRegex = /^\S+@\S+\.\S+$/;
+        return emailRegex.test(email);
+    }
+
+    function isValidPhone(phone) {
+        var phoneRegex = /^\d{11}$/;
+        return phoneRegex.test(phone);
+    }
+</script>
+</body>
+</html>
